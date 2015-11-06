@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 app.get('/', function (req, res) {
+	 console.log('in server');
   res.send('Hello World!');
 });
 app.get('/test', function (req, res) {
