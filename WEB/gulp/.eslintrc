@@ -1,5 +1,9 @@
 {
   "env": {
     "node": true
-  }
+     
+  },
+  "rules": {
+        "no-unused-vars": [0, {"args": "after-used", "argsIgnorePattern": "^_"}]
+    }
 }

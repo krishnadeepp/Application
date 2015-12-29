@@ -5,6 +5,8 @@
     <title>app</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+ 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -12,19 +14,38 @@
     <!-- run `gulp inject` to automatically populate bower styles dependencies -->
     <!-- endbower -->
     <!-- endbuild -->
-
+   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- build:css({.tmp/serve,src}) styles/app.css -->
     <!-- inject:css -->
     <!-- css files will be automatically insert here -->
     <!-- endinject -->
     <!-- endbuild -->
+   
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+  
+<nav id="sidebar" style="background:#3C3C3C;width:250px" role="navigation" data-step="2" data-intro="Template has <b>many navigation styles</b>" data-position="right" class="navbar-default navbar-static-side" style="min-height: 100%;">
+ <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    
+                     <div class="clearfix"></div>
+                
 
-    <div ui-view></div>
+                     <master-menu items="ICDCode,MedicationMaster"></master-menu>
+                    
+                </ul>
+            </div>
+  </nav>
+</div>
+<div  style="margin-top:100px" class="container">
+    <div class="text-center">
+        <div ui-view>
+        </div>
+    </div>
+</div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
@@ -41,6 +62,6 @@
     <!-- angular templates will be automatically converted in js and inserted here -->
     <!-- endinject -->
     <!-- endbuild -->
-
+   
   </body>
 </html>

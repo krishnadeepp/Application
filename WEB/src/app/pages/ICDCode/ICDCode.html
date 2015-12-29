@@ -1,0 +1,66 @@
+
+
+<div class="container">
+
+{{data}}
+ <form role="form" novalidate class="css-form">
+ <div class="form-group">
+  <label for="IcdCode">ICD Code</label>
+    <input type="text"  required=""  ng-model="data.code" class="form-control" name="IcdCode" id="IcdCode">
+    <div ng-show="form.$submitted || form.IcdCode.$touched">
+      <div ng-show="data.IcdCode.$error.required">Cannot be blank</div>
+    </div>
+ </div>
+ <div class="form-group">
+ <label for="email">ICD Code Type</label>
+   <div class="btn-group" uib-dropdown dropdown-append-to-body>
+      <button id="btn-append-to-body" type="button" class="btn btn-primary" uib-dropdown-toggle>
+        {{default}}<span class="caret"></span>
+     
+      </button>
+      <ul class="uib-dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">
+     
+        <li role="menuitem" ng-repeat="(key, value) in type"><a href ng-click="slectValue(key,value)">{{value}}</a></li>
+       
+      </ul>
+    </div>
+  </div>
+
+  <div class="form-group">
+  <label for="IcdCode">ICD Description</label>
+    <input type="text"  ng-model="data.description" class="form-control" id="Description">
+ </div>
+ <div class="form-group">
+<label for="IcdCode">Effective Date<label>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+              <input type="text" class="form-control" uib-datepicker-popup="dd/MM/yy" ng-model="data.effdate" is-open="effdtopened" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openEffDate($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+
+ </div>
+ </div>
+
+ <div class="form-group">
+<label for="IcdCode">End Data</label>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+              <input type="text" class="form-control" uib-datepicker-popup="dd/MM/yy" ng-model="data.enddate" is-open="enddtopened" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openEndDate($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+
+ </div>
+ </div>
+ <button type="button" class="btn btn-primary" ng-click="SaveForm()">
+        Submit
+    </button>
+     </form>
+</div>

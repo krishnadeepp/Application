@@ -1,0 +1,16 @@
+{  
+   "dev":{  
+      "dbconnection":{  
+         "ip":"localhost",
+         "port":"27017",
+         "database":"MDM",
+         "server" : "mongodb"
+      },
+      "serverport" : 8081
+   },
+   "prod":{  
+      "dbconnection":{  
+
+      }
+   }
+}
