@@ -4,7 +4,7 @@
 	function menuDirective($log)
 	{
 		var directive = {
-			templateUrl :  "app/components/menu/menu.html",
+			templateUrl :  "app/modules/menu/menu.html",
 			link : menuLink,
 			replace :true
 		};
