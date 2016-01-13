@@ -19,6 +19,7 @@ exports.get = function(cb) {
  var items  = db.get().collection(collection).find().toArray(function(err,docs){
  	cb( err,docs);
  });
+}
 
  exports.getItem = function(id,cb) {
  var items  = db.get().collection(collection).find().toArray(function(err,docs){

@@ -26,8 +26,12 @@ console.log('Example app listening at http://%s:%s', host, port);
 });
 
 db.connect(dbconnection,function(err){
-	if(err)
+console.log(dbconnection);
+	if(err){
+		console.log(err);
 		process.exit(1);
+
+	}
 	else
 		console.log('mongodb started');
 
