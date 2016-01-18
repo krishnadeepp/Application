@@ -10,7 +10,7 @@
    },
    "prod":{  
       "dbconnection":{  
-         "ip":"ec2-54-201-165-72.us-west-2.compute.amazonaws.com",
+         "ip":"ec2-54-200-49-212.us-west-2.compute.amazonaws.com",
          "port":"27017",
          "database":"MDM",
          "server" : "mongodb"
